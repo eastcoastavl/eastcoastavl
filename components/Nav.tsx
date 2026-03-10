@@ -4,13 +4,12 @@ import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { usePathname } from 'next/navigation'
-import { Menu, X, Zap } from 'lucide-react'
+import { Menu, X } from 'lucide-react'
 
 const navLinks = [
   { href: '/', label: 'Home' },
   { href: '/about', label: 'About' },
   { href: '/services', label: 'Services' },
-  { href: '/sermonai', label: 'SermonAI' },
   { href: '/contact', label: 'Contact' },
 ]
 
@@ -24,8 +23,6 @@ export default function Nav() {
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
-
-  if (pathname.startsWith('/dashboard')) return null
 
   return (
     <header
@@ -51,22 +48,17 @@ export default function Nav() {
               key={link.href}
               href={link.href}
               className={`text-sm font-semibold tracking-wide transition-colors duration-150 ${
-                link.href === '/sermonai'
-                  ? 'text-[#1a7fe8] hover:text-[#5bb8ff] font-bold'
-                  : pathname === link.href
-                  ? 'text-white'
-                  : 'text-white/70 hover:text-white'
+                pathname === link.href ? 'text-white' : 'text-white/70 hover:text-white'
               }`}
             >
               {link.label}
             </Link>
           ))}
           <Link
-            href="/dashboard"
+            href="/contact"
             className="flex items-center gap-2 px-4 py-2 bg-[#1a7fe8] text-white text-sm font-semibold rounded-lg hover:bg-[#2196f3] transition-colors duration-150"
           >
-            <Zap size={14} />
-            Client Portal
+            Get A Quote
           </Link>
         </nav>
 
@@ -83,19 +75,17 @@ export default function Nav() {
                 key={link.href}
                 href={link.href}
                 onClick={() => setOpen(false)}
-                className={`py-3 text-base font-semibold border-b border-white/10 last:border-0 ${
-                  link.href === '/sermonai' ? 'text-[#1a7fe8]' : 'text-white/80'
-                }`}
+                className="py-3 text-base font-semibold border-b border-white/10 last:border-0 text-white/80"
               >
                 {link.label}
               </Link>
             ))}
             <Link
-              href="/dashboard"
+              href="/contact"
               onClick={() => setOpen(false)}
-              className="mt-3 flex items-center justify-center gap-2 px-4 py-3 bg-[#1a7fe8] text-white font-semibold rounded-lg"
+              className="mt-3 flex items-center justify-center px-4 py-3 bg-[#1a7fe8] text-white font-semibold rounded-lg"
             >
-              <Zap size={16} /> Client Portal
+              Get A Quote
             </Link>
           </nav>
         </div>

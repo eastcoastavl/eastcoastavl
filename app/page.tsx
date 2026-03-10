@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { ArrowRight, Mic, Video, Lightbulb, Zap, FileText, Share2, Scissors, Music } from 'lucide-react'
+import { ArrowRight, Mic, Video, Lightbulb, Calendar, Settings, Radio } from 'lucide-react'
 
 export default function HomePage() {
   return (
@@ -25,8 +25,8 @@ export default function HomePage() {
               <Link href="/services" className="btn-primary">
                 Our Services <ArrowRight size={16} />
               </Link>
-              <Link href="/sermonai" className="btn-outline">
-                SermonAI <Zap size={16} />
+              <Link href="/contact" className="btn-outline">
+                Get In Touch
               </Link>
             </div>
           </div>
@@ -87,60 +87,40 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* SermonAI Feature Block */}
+      {/* Why us */}
       <section className="py-24 bg-[#f8fafc]">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="bg-[#0a0f2e] rounded-3xl overflow-hidden relative">
-            <div
-              className="absolute top-0 right-0 w-96 h-96 rounded-full pointer-events-none"
-              style={{
-                background: 'radial-gradient(circle, rgba(26,127,232,0.2) 0%, transparent 70%)',
-                transform: 'translate(30%, -30%)',
-              }}
-            />
-            <div className="relative z-10 p-12 md:p-16">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                <div>
-                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#1a7fe8]/20 border border-[#1a7fe8]/30 mb-6">
-                    <Zap size={12} className="text-[#1a7fe8]" />
-                    <span className="text-[#1a7fe8] text-xs font-bold tracking-widest uppercase">
-                      Introducing SermonAI
-                    </span>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+            <div>
+              <p className="section-label mb-3">Why Eastcoast AVL</p>
+              <h2 className="section-title mb-6">Built by People Who Do This</h2>
+              <p className="text-gray-500 leading-relaxed mb-4">
+                We&apos;re not a vendor — we&apos;re working professionals with years of hands-on
+                experience behind the console, on the lighting rig, and behind the camera.
+              </p>
+              <p className="text-gray-500 leading-relaxed mb-8">
+                Whether it&apos;s a weekly church service or a large-scale production, we bring
+                the same level of expertise and attention to detail to every project.
+              </p>
+              <Link href="/about" className="btn-primary">
+                About Us <ArrowRight size={16} />
+              </Link>
+            </div>
+            <div className="bg-[#0a0f2e] rounded-3xl p-10">
+              <div className="grid grid-cols-2 gap-8 text-center">
+                {[
+                  { value: '100+', label: 'Events Produced' },
+                  { value: '50+', label: 'Church Clients' },
+                  { value: '8+', label: 'Years Experience' },
+                  { value: '24/7', label: 'Support Available' },
+                ].map((stat) => (
+                  <div key={stat.label}>
+                    <p className="font-display font-black text-[#1a7fe8] mb-1" style={{ fontSize: '2.5rem' }}>
+                      {stat.value}
+                    </p>
+                    <p className="text-white/50 text-sm">{stat.label}</p>
                   </div>
-                  <h2
-                    className="font-display font-black text-white leading-tight mb-5"
-                    style={{ fontSize: 'clamp(2rem, 4vw, 3rem)' }}
-                  >
-                    Upload Once.
-                    <br />
-                    <span style={{ color: '#1a7fe8' }}>Publish Everywhere.</span>
-                  </h2>
-                  <p className="text-white/60 leading-relaxed mb-8">
-                    Upload your sermon video and receive a complete content package —
-                    transcript, blog post, social captions, video clips, graphics,
-                    podcast episode, and more. Automatically.
-                  </p>
-                  <Link href="/sermonai" className="btn-primary">
-                    Learn More <ArrowRight size={16} />
-                  </Link>
-                </div>
-                <div className="grid grid-cols-2 gap-3">
-                  {[
-                    { icon: <FileText size={16} />, label: 'Transcript & Summary' },
-                    { icon: <Share2 size={16} />, label: 'Social Captions' },
-                    { icon: <Scissors size={16} />, label: 'Short-Form Clips' },
-                    { icon: <Music size={16} />, label: 'Podcast Episode' },
-                  ].map((item) => (
-                    <div
-                      key={item.label}
-                      className="flex items-center gap-3 p-4 rounded-xl border"
-                      style={{ background: 'rgba(255,255,255,0.05)', borderColor: 'rgba(26,127,232,0.2)' }}
-                    >
-                      <span className="text-[#1a7fe8]">{item.icon}</span>
-                      <span className="text-white/70 text-sm font-medium">{item.label}</span>
-                    </div>
-                  ))}
-                </div>
+                ))}
               </div>
             </div>
           </div>
@@ -153,7 +133,7 @@ export default function HomePage() {
           <p className="section-label mb-3">Get In Touch</p>
           <h2 className="section-title mb-5">Ready to Work Together?</h2>
           <p className="text-gray-500 mb-8 text-lg">
-            Whether it&apos;s a Sunday service, a live event, or church media automation —
+            Whether it&apos;s a Sunday service, a live event, or a full system installation —
             let&apos;s talk about what you need.
           </p>
           <Link href="/contact" className="btn-primary text-base px-8 py-4">

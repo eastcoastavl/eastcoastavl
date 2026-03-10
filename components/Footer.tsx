@@ -25,7 +25,6 @@ export default function Footer() {
                 { href: '/', label: 'Home' },
                 { href: '/about', label: 'About' },
                 { href: '/services', label: 'Services' },
-                { href: '/sermonai', label: 'SermonAI' },
                 { href: '/contact', label: 'Contact' },
               ].map((link) => (
                 <li key={link.href}>
@@ -42,8 +41,8 @@ export default function Footer() {
             <ul className="space-y-3">
               <li className="flex items-start gap-2 text-sm text-white/50">
                 <Mail size={14} className="mt-0.5 text-[#1a7fe8] shrink-0" />
-                <a href="mailto:sermonai@eastcoastavl.com" className="hover:text-white transition-colors">
-                  sermonai@eastcoastavl.com
+                <a href="mailto:info@eastcoastavl.com" className="hover:text-white transition-colors">
+                  info@eastcoastavl.com
                 </a>
               </li>
               <li className="flex items-start gap-2 text-sm text-white/50">
@@ -51,12 +50,6 @@ export default function Footer() {
                 Jacksonville, NC
               </li>
             </ul>
-            <div className="mt-6">
-              <h4 className="text-white font-semibold text-sm tracking-widest uppercase mb-3">SermonAI Portal</h4>
-              <Link href="/dashboard" className="inline-flex items-center gap-2 text-sm text-[#1a7fe8] hover:text-[#5bb8ff] transition-colors font-semibold">
-                Client Login →
-              </Link>
-            </div>
           </div>
         </div>
 
