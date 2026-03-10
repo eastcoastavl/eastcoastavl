@@ -9,10 +9,6 @@ export const metadata: Metadata = {
     template: '%s | Eastcoast AVL',
   },
   description: 'Professional Audio, Video, and Lighting services for churches, live events, and broadcast production. Based in Jacksonville, NC.',
-  icons: {
-    icon: '/icon.png',
-    apple: '/icon.png',
-  },
   openGraph: {
     siteName: 'Eastcoast AVL',
     locale: 'en_US',
