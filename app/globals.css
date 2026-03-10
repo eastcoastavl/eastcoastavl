@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Barlow+Condensed:wght@600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-display: 'Barlow Condensed', sans-serif;
+  --font-body: 'Barlow', sans-serif;
+
+  --navy-950: #050a1a;
+  --navy-900: #0a0f2e;
+  --navy-800: #0d1545;
+  --blue-electric: #1a7fe8;
+  --blue-bright: #2196f3;
+  --blue-glow: #5bb8ff;
+  --white: #ffffff;
+  --gray-50: #f8fafc;
+  --gray-100: #f1f5f9;
+  --gray-600: #475569;
+  --gray-900: #0f172a;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--gray-900);
+  background: var(--white);
+  -webkit-font-smoothing: antialiased;
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center gap-2 px-6 py-3 bg-[#1a7fe8] text-white font-semibold rounded-lg 
+           hover:bg-[#2196f3] transition-all duration-200 hover:shadow-lg hover:shadow-[#1a7fe8]/30 
+           hover:-translate-y-0.5;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center gap-2 px-6 py-3 border-2 border-[#1a7fe8] text-[#1a7fe8] 
+           font-semibold rounded-lg hover:bg-[#1a7fe8] hover:text-white transition-all duration-200;
+  }
+
+  .btn-white {
+    @apply inline-flex items-center gap-2 px-6 py-3 bg-white text-[#0a0f2e] font-semibold rounded-lg 
+           hover:bg-gray-100 transition-all duration-200;
+  }
+
+  .section-label {
+    @apply text-sm font-bold tracking-[0.2em] uppercase text-[#1a7fe8];
+  }
+
+  .section-title {
+    @apply text-4xl md:text-5xl font-display font-bold leading-tight text-[#0a0f2e];
+  }
+
+  .card {
+    @apply bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-200;
+  }
+
+  .nav-link {
+    @apply text-sm font-semibold tracking-wide text-white/80 hover:text-white transition-colors duration-150;
+  }
+}
+
+.hero-bg {
+  background: linear-gradient(135deg, #050a1a 0%, #0a0f2e 40%, #0d1545 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-bg::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(ellipse at 60% 40%, rgba(26, 127, 232, 0.15) 0%, transparent 60%),
+              radial-gradient(ellipse at 20% 80%, rgba(91, 184, 255, 0.08) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.wave-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  line-height: 0;
+}
