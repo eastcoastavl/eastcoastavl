@@ -42,10 +42,8 @@ export default function AboutPage() {
                   and large-scale events up and down the East Coast.
                 </p>
                 <p>
-                  SermonAI grew out of our own work with church clients — we kept seeing
-                  the same challenge: great sermon content locked inside a video file,
-                  with no time or budget to turn it into a full content strategy. So we built
-                  the automation to do it.
+                  Every project we take on is personal — we treat your venue, your service,
+                  and your event like it's our own. That's the Eastcoast difference.
                 </p>
               </div>
             </div>

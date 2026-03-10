@@ -28,7 +28,7 @@ export default function ContactPage() {
           </h1>
           <p className="text-white/60 text-xl max-w-2xl leading-relaxed">
             Whether you need AVL production for an event, a church system installation,
-            or want to learn more about SermonAI — we&apos;d love to hear from you.
+            or need ongoing technical support — we&apos;d love to hear from you.
           </p>
         </div>
         <div className="wave-bottom">
@@ -50,8 +50,8 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <p className="font-semibold text-[#0a0f2e] text-sm mb-1">Email</p>
-                    <a href="mailto:sermonai@eastcoastavl.com" className="text-gray-500 hover:text-[#1a7fe8] transition-colors">
-                      sermonai@eastcoastavl.com
+                    <a href="mailto:info@eastcoastavl.com" className="text-gray-500 hover:text-[#1a7fe8] transition-colors">
+                      info@eastcoastavl.com
                     </a>
                   </div>
                 </div>
@@ -67,10 +67,10 @@ export default function ContactPage() {
                 </div>
               </div>
               <div className="mt-12 p-6 bg-[#f8fafc] rounded-2xl border border-gray-100">
-                <p className="font-semibold text-[#0a0f2e] mb-2">Interested in SermonAI?</p>
+                <p className="font-semibold text-[#0a0f2e] mb-2">Need a Quote?</p>
                 <p className="text-gray-500 text-sm leading-relaxed">
-                  Mention SermonAI in your message and we&apos;ll reach out with plan details
-                  and get your account set up within 24 hours.
+                  Tell us about your event or project and we&apos;ll get back to you
+                  with a custom proposal within 24 hours.
                 </p>
               </div>
             </div>
@@ -107,7 +107,6 @@ export default function ContactPage() {
                   <div>
                     <label className="block text-sm font-semibold text-[#0a0f2e] mb-1.5">I&apos;m interested in</label>
                     <select className="w-full px-4 py-3 rounded-xl border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-[#1a7fe8] focus:border-transparent bg-white">
-                      <option>SermonAI</option>
                       <option>Live Sound Production</option>
                       <option>Video Production & Broadcast</option>
                       <option>Lighting Design</option>

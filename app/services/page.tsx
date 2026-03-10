@@ -76,12 +76,11 @@ export default function ServicesPage() {
       <section className="py-16 bg-[#0a0f2e]">
         <div className="max-w-3xl mx-auto px-6 text-center">
           <h2 className="font-display font-black text-white mb-5" style={{ fontSize: 'clamp(1.8rem, 3vw, 2.5rem)' }}>
-            Looking for Church Media Automation?
+            Ready to Elevate Your Production?
           </h2>
-          <p className="text-white/60 mb-8">Check out SermonAI — our AI-powered content pipeline for churches.</p>
+          <p className="text-white/60 mb-8">Let&apos;s talk about how Eastcoast AVL can support your next event or service.</p>
           <div className="flex flex-wrap items-center justify-center gap-4">
-            <Link href="/sermonai" className="btn-primary">Learn About SermonAI <ArrowRight size={16} /></Link>
-            <Link href="/contact" className="btn-outline">Contact Us</Link>
+            <Link href="/contact" className="btn-primary">Get In Touch <ArrowRight size={16} /></Link>
           </div>
         </div>
       </section>
